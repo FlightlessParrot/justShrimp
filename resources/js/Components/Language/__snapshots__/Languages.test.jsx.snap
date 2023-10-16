@@ -1,0 +1,172 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`component render correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="m-10 w-max"
+      >
+        <div
+          class=" rounded-md bg-opacity-50 p-4 px-8 bg-black  text-cyan-600 "
+        >
+          <b
+            class="block"
+          >
+            Wybierz język
+          </b>
+          <b
+            class="block"
+          >
+            Choose language
+          </b>
+        </div>
+        <div
+          class="p-4 flex justify-center gap-6"
+        >
+          <a
+            aria-label="zmień język na / change language Polish"
+            class="relative group hover:scale-110 rounded-md flex justify-center items-center    transition-all"
+            href="/pl"
+            style="background-image: url(/images/language/spyPl_80.webp); width: 80px; height: 40px;"
+          >
+            <span
+              class="relative z-20 invisible group-hover:visible transition-all text-white"
+            >
+               
+              Polish
+            </span>
+            <div
+              class="absolute w-full h-fit  group-hover:bg-none opacity-50 group-hover:bg-black group-hover:h-full transition-all"
+            />
+          </a>
+          <a
+            aria-label="zmień język na / change language English"
+            class="relative group hover:scale-110 rounded-md flex justify-center items-center    transition-all"
+            href="/en"
+            style="background-image: url(/images/language/spyEn_80.webp); width: 80px; height: 40px;"
+          >
+            <span
+              class="relative z-20 invisible group-hover:visible transition-all text-white"
+            >
+               
+              English
+            </span>
+            <div
+              class="absolute w-full h-fit  group-hover:bg-none opacity-50 group-hover:bg-black group-hover:h-full transition-all"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="m-10 w-max"
+    >
+      <div
+        class=" rounded-md bg-opacity-50 p-4 px-8 bg-black  text-cyan-600 "
+      >
+        <b
+          class="block"
+        >
+          Wybierz język
+        </b>
+        <b
+          class="block"
+        >
+          Choose language
+        </b>
+      </div>
+      <div
+        class="p-4 flex justify-center gap-6"
+      >
+        <a
+          aria-label="zmień język na / change language Polish"
+          class="relative group hover:scale-110 rounded-md flex justify-center items-center    transition-all"
+          href="/pl"
+          style="background-image: url(/images/language/spyPl_80.webp); width: 80px; height: 40px;"
+        >
+          <span
+            class="relative z-20 invisible group-hover:visible transition-all text-white"
+          >
+             
+            Polish
+          </span>
+          <div
+            class="absolute w-full h-fit  group-hover:bg-none opacity-50 group-hover:bg-black group-hover:h-full transition-all"
+          />
+        </a>
+        <a
+          aria-label="zmień język na / change language English"
+          class="relative group hover:scale-110 rounded-md flex justify-center items-center    transition-all"
+          href="/en"
+          style="background-image: url(/images/language/spyEn_80.webp); width: 80px; height: 40px;"
+        >
+          <span
+            class="relative z-20 invisible group-hover:visible transition-all text-white"
+          >
+             
+            English
+          </span>
+          <div
+            class="absolute w-full h-fit  group-hover:bg-none opacity-50 group-hover:bg-black group-hover:h-full transition-all"
+          />
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

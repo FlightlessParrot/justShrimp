@@ -1,9 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Mail\SendForm;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+use function Laravel\Prompts\error;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,24 +20,50 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['lang'])->group(function (){
+Route::get('/{language?}', function () {
+    return Inertia::render('Main',['lang'=>__('main')]);
+});
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+Route::get('/{language?}/contact', function () {
+    return Inertia::render('Contact',['lang'=>__('contact')]);
+});
+});
+
+
+
+Route::get('/pl/mailable',function(){
+    $data=[
+        'subject'=> 'website',
+        'message'=>'Make my website, please.',
+        'tel'=>'+48 730 977 004',
+        'email'=>'meeeczarnia@gmail.com'
+    ];
+    return new \App\Mail\SendForm($data);
+});
+
+Route::post('/send/mail', function (Request $request){
+
+    $request->validate([
+        'tel'=>'required',
+        'email'=>'required|email',
+        'message'=>'required|max:1000',
+        'subject'=>'required|max:250'
     ]);
+    $message=$request->all();
+   
+    try{
+        Mail::to(env('SHRIMP_MAIL','shrimpinweb@gmail.com'))->send(new SendForm($message));
+    }
+    catch(Exception $e)
+    {
+       $request->session()->flash('message', __('flash.mail.failure'));  
+       return back();
+    }
+    
+    
+    $request->session()->flash('message', __('flash.mail.success'));
+    return back();
+    
 });
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
 require __DIR__.'/auth.php';

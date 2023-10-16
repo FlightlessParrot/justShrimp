@@ -1,0 +1,19 @@
+@use './contact.scss';
+input{
+    border: none;
+    border-bottom: black 1px solid;
+    background-color: transparent;
+    font-family: typewritter;
+    letter-spacing: 0.2em;
+}
+
+.first{
+    letter-spacing: 0.2em;
+    font-family: typewritter;
+}
+
+textarea{
+    background-color: #d1ccb8;
+    border:none;
+    outline: none;
+}

@@ -9,5 +9,9 @@ export default defineConfig({
             refresh: true,
         }),
         react(),
-    ],
+    ], 
+    test: {
+        globals: true,
+        environment: 'jsdom',
+      },
 });

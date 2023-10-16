@@ -1,0 +1,37 @@
+@font-face {
+    font-family: typewritter;
+    src: url('/fonts/jmh_typewriter/JMH Typewriter.ttf');
+    font-display: swap;
+}
+
+
+.contact{
+     background-image: url(/images/contact-bg.webp);
+    background-repeat: repeat;
+    font-family: typewriter;
+    letter-spacing: 0.4em;
+}
+.rotateFrame{
+    perspective: 1000px;
+}
+.myRotate{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transform-origin: center left;
+    
+    transition: all 300ms;
+}
+.page{
+    backface-visibility: hidden;
+
+}
+.backface{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+
+   
+}
+.nonRotate{
+    transform: rotateY(0deg);
+    transition: all 300ms;
+}

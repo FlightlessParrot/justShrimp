@@ -1,0 +1,25 @@
+
+body{
+    background: rgba(106, 101, 116, 0.133);
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+div{
+    background-color: rgb(255, 255, 255);
+    padding: 2em;
+}
+h1, h2{
+    border-color: #0e1350;
+    border-width: 0px 0px 1px 0px; 
+    border-style: solid;
+
+}
+
+a{
+    display: block;
+    margin-top: 1em;
+}
