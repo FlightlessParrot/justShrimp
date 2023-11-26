@@ -14,7 +14,7 @@ return [
         'messageLabel' => 'I report that:',
         'titleLabel' => 'I title this message:',
         'mailLabel' => 'Contact me by email',
-        'phoneLabel' => 'or under phone number',
+        'phoneLabel' => 'or by phone number',
         'action' => 'Sent'
     ],
     'file' => [

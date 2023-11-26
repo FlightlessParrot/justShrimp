@@ -3,7 +3,7 @@ import "../../css/contact.scss";
 import { useEffect, useRef, useState } from "react";
 import First from "@/Components/Page/First";
 import Second from "@/Components/Page/Second";
-import { Link, usePage } from "@inertiajs/react";
+import {  usePage } from "@inertiajs/react";
 import SendingMail from "@/Components/SendingMail";
 import Notyfication from "@/Components/Notyfication";
 import ReturnButton from "@/Components/ReturnButton";
@@ -13,8 +13,6 @@ export default function Contact({lang}) {
     const [isSending,setIsSending]=useState(false)
     const [showNotyfication, setShowNotyfication]=useState(false)
     const {flash}=usePage().props
-    console.log(flash?.message)
-    console.log(isSending)
     const ref= useRef()
     useEffect(
         ()=>{
